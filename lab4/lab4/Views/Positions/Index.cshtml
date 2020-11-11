@@ -1,0 +1,25 @@
+﻿@model IEnumerable<lab4.Position>
+@{
+    ViewData["title"] = "Positions";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>A LIST OF POSITIONS</title>
+</head>
+<body>
+    <h3 align="center">Positions:</h3>
+    <table align="center" border="1">
+        <tr>
+            <td>Name</td>
+        </tr>
+        @foreach (var position in Model)
+        {
+            <tr>
+                <td>@position.Name</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

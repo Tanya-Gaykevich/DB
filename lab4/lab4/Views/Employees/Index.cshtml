@@ -1,0 +1,33 @@
+﻿@model IEnumerable<lab4.Employee>
+@{
+    ViewData["title"] = "Employee";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>A LIST OF EMPLOYEES</title>
+</head>
+<body>
+    <h3 align="center">Employees:</h3>
+    <table align="left" border="1">
+        <tr>
+            <td>Surmane</td>
+            <td>Name</td>
+            <td>Patronymic</td>
+            <td>Birthday</td>
+            <td>Position name</td>
+        </tr>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Surname</td>
+                <td>@employee.Name</td>
+                <td>@employee.Patronymic</td>
+                <td>@employee.Birthday.ToShortDateString()</td>
+                <td>@employee.Position.Name</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

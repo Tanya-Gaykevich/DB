@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{E1C61014-1D1E-474A-BCBF-DD6C2A406F55}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TouristAgencyApp/Data/TouristAgencyContext.cs">
+    <Files>
+      <File FileName="TouristAgencyApp/Startup.cs" Line="86" Column="37" />
+      <File FileName="TouristAgencyApp/Program.cs" />
+      <File FileName="TouristAgencyApp/appsettings.json" />
+      <File FileName="TouristAgencyApp/Session/SessionExtension.cs" />
+      <File FileName="TouristAgencyApp/Models/Voucher.cs" />
+      <File FileName="TouristAgencyApp/Models/TypeOfRest.cs" />
+      <File FileName="TouristAgencyApp/Models/ServiceVoucher.cs" />
+      <File FileName="TouristAgencyApp/Properties/launchSettings.json" />
+      <File FileName="TouristAgencyApp/Middleware/Middleware.cs" Line="20" Column="63" />
+      <File FileName="TouristAgencyApp/Data/TouristAgencyContext.cs" Line="19" Column="63" />
+      <File FileName="TouristAgencyApp/Models/Employee.cs" />
+      <File FileName="TouristAgencyApp/Models/Client.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TouristAgency" expanded="True">
+            <Node name="TouristAgencyApp" expanded="True">
+              <Node name="Data" expanded="True">
+                <Node name="TouristAgencyContext.cs" selected="True" />
+              </Node>
+              <Node name="Middleware" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Session" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TouristAgencyApp PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

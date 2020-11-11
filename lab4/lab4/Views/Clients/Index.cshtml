@@ -1,0 +1,40 @@
+﻿@model IEnumerable<lab4.Client>
+@{
+    ViewData["title"] = "Clients";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>A LIST OF CLIENTS</title>
+</head>
+<body>
+    <h3 align="center">Clients:</h3>
+    <table border="1">
+        <tr>
+            <td>Surname</td>
+            <td>Name</td>
+            <td>Patronymic</td>
+            <td>Birthday</td>
+            <td>Gender</td>
+            <td>Address</td>
+            <td>Phone</td>
+            <td>PassportData</td>
+        </tr>
+        @foreach (var client in Model)
+        {
+            <tr>
+                <td>@client.Surname</td>
+                <td>@client.Name</td>
+                <td>@client.Patronymic</td>
+                <td>@client.Birthday.ToShortDateString()</td>
+                <td>@(client.Gender ? "women": "men")</td>
+                <td>@client.Address</td>
+                <td>@client.Phone</td>
+                <td>@client.PassportData</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

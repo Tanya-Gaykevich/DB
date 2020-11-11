@@ -1,0 +1,60 @@
+﻿<Properties StartupConfiguration="{9E04F175-9C06-436F-82F7-E403A0A1FABE}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="lab4/appsettings.json">
+    <Files>
+      <File FileName="lab4/Startup.cs" Line="16" Column="10" />
+      <File FileName="lab4/Views/Home/Index.cshtml" />
+      <File FileName="lab4/Models/Voucher.cs" />
+      <File FileName="lab4/Models/Employee.cs" />
+      <File FileName="lab4/Middleware/InitializeDbMiddleware.cs" />
+      <File FileName="lab4/appsettings.json" Line="14" Column="1" />
+      <File FileName="lab4/Program.cs" />
+      <File FileName="lab4/Controllers/PositionsController.cs" />
+      <File FileName="lab4/Views/Shared/_Layout.cshtml" />
+      <File FileName="lab4/Controllers/EmployeesController.cs" />
+      <File FileName="lab4/Views/Employees/Index.cshtml" />
+      <File FileName="lab4/Controllers/ClientsController.cs" />
+      <File FileName="lab4/Views/Clients/Index.cshtml" />
+      <File FileName="lab4/Views/Positions/Index.cshtml" />
+      <File FileName="lab4/wwwroot/css/site.css" />
+      <File FileName="lab4/Views/_ViewStart.cshtml" />
+      <File FileName="lab4/Views/_ViewImports.cshtml" />
+      <File FileName="lab4/Properties/launchSettings.json" />
+      <File FileName="lab4/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="lab4/Views/Shared/Error.cshtml" />
+      <File FileName="lab4/Controllers/HomeController.cs" />
+      <File FileName="lab4/Data/DbInitializer.cs" />
+      <File FileName="lab4/Data/TouristAgencyContext.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lab4" expanded="True">
+            <Node name="lab4" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Middleware" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Clients" expanded="True" />
+                <Node name="Employees" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Positions" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.lab4 PreferredExecutionTarget="/Applications/Safari.app" />
+</Properties>
