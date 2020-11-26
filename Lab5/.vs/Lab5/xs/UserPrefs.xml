@@ -1,0 +1,53 @@
+﻿<Properties StartupConfiguration="{54E2E254-5585-4D9E-A636-F9EFD33016D4}|Default">
+  <MonoDevelop.Ide.ItemProperties.Lab5 PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lab5/Startup.cs">
+    <Files>
+      <File FileName="Lab5/ViewModels/Position/FilterPositionViewModel.cs" Line="6" Column="35" />
+      <File FileName="Lab5/ViewModels/Position/IndexPositionViewModel.cs" />
+      <File FileName="Lab5/ViewModels/Client/FilterClientViewModel.cs" />
+      <File FileName="Lab5/ViewModels/Client/IndexClientViewModel.cs" />
+      <File FileName="Lab5/ViewModels/Client/SortClientViewModel.cs" />
+      <File FileName="Lab5/ViewModels/Employee/FilterEmployeeViewModel.cs" />
+      <File FileName="Lab5/ViewModels/Employee/IndexEmployeeViewModel.cs" />
+      <File FileName="Lab5/ViewModels/Employee/SortEmployeeViewModel.cs" />
+      <File FileName="Lab5/Properties/launchSettings.json" />
+      <File FileName="Lab5/Services/CachingService.cs" />
+      <File FileName="Lab5/ViewModels/PageViewModel.cs" />
+      <File FileName="Lab5/appsettings.json" Line="4" Column="101" />
+      <File FileName="Lab5/Startup.cs" Line="36" Column="32" />
+      <File FileName="Lab5/Data/TouristAgencyContext.cs" Line="28" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Lab5" expanded="True">
+            <Node name="Lab5" expanded="True">
+              <Node name="Areas" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="Client" expanded="True" />
+                <Node name="Employee" expanded="True" />
+                <Node name="Position" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Employees" expanded="True" />
+              </Node>
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/DB/Lab5/Lab5/Data/DBInitialazer.cs" relfile="Lab5/Data/DBInitialazer.cs" line="20" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
