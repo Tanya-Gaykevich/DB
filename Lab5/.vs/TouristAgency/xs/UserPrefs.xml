@@ -1,10 +1,35 @@
 ﻿<Properties StartupConfiguration="{A62BF32C-FA9E-4091-8E8D-87FFDE301924}|Default">
   <MonoDevelop.Ide.ItemProperties.TouristAgency PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="TouristAgency/wwwroot/css/site.css">
+    <Files>
+      <File FileName="TouristAgency/Controllers/ClientsController.cs" Line="1" Column="1" />
+      <File FileName="TouristAgency/Areas/Identity/Roles.cs" />
+      <File FileName="TouristAgency/Areas/Identity/IdentityInitializer.cs" />
+      <File FileName="TouristAgency/appsettings.json" Line="4" Column="108" />
+      <File FileName="TouristAgency/Startup.cs" Line="36" Column="34" />
+      <File FileName="TouristAgency/wwwroot/css/site.css" Line="21" Column="60" />
+      <File FileName="TouristAgency/wwwroot/js/site.js" Line="1" Column="1" />
+      <File FileName="TouristAgency/Views/Home/Index.cshtml" Line="9" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="TouristAgency" expanded="True" selected="True" />
+          <Node name="TouristAgency" expanded="True">
+            <Node name="TouristAgency" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True">
+                  <Node name="site.css" selected="True" />
+                </Node>
+                <Node name="js" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>

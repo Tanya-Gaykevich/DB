@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uRkmR3toqRgWBgmag+JWrH9aLyMnEEMmDREo7f3fForkIpTmFpdvTVmJRUcohKqLq0WHY+aR658v/q0nj45Xgw==",
+  "dgSpecHash": "9Tp+AWLoJ+yWISC8sAPx+RsqkK8HeXtKi6au1iCJfPYhxCSd4cKxxWlaOQD5VRlYkE1eZ5jEBcGkveA0zEtzBw==",
   "success": true,
-  "projectFilePath": "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/lab4/lab4/lab4/lab4.csproj",
+  "projectFilePath": "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/DB/lab4/lab4/lab4.csproj",
   "expectedPackageFiles": [
     "/Users/tatyanagaykevich/.nuget/packages/microsoft.aspnetcore.authentication/2.2.0/microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "/Users/tatyanagaykevich/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.2.0/microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

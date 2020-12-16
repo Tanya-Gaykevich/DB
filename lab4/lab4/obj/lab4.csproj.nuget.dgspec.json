@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/lab4/lab4/lab4/lab4.csproj": {}
+    "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/DB/lab4/lab4/lab4.csproj": {}
   },
   "projects": {
-    "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/lab4/lab4/lab4/lab4.csproj": {
+    "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/DB/lab4/lab4/lab4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/lab4/lab4/lab4/lab4.csproj",
+        "projectUniqueName": "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/DB/lab4/lab4/lab4.csproj",
         "projectName": "lab4",
-        "projectPath": "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/lab4/lab4/lab4/lab4.csproj",
+        "projectPath": "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/DB/lab4/lab4/lab4.csproj",
         "packagesPath": "/Users/tatyanagaykevich/.nuget/packages/",
-        "outputPath": "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/lab4/lab4/lab4/obj/",
+        "outputPath": "/Users/tatyanagaykevich/Documents/THIRD COURSE/БД/DB/lab4/lab4/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tatyanagaykevich/.config/NuGet/NuGet.Config"

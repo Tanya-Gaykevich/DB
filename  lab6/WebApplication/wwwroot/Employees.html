@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h2 class="text-center">Table "Employees"</h2>
+
+    <form name="employeeForm">
+        <input type="hidden" id="idIn" name="idIn" value=0 />
+        <div class="form-group">
+            <label>Last Name:</label>
+            <input id="lastNameIn" name="lastNameIn" />
+
+            <label>First Name: </label>
+            <input id="firstNameIn" name="firstNameIn" />
+
+            <label>Middle Name: </label>
+            <input id="middleNameIn" name="middleNameIn" />
+        </div>
+        <div class="form-group">
+            <label>Birth Date: </label>
+            <input type="date" id="birthDateIn" name="birthDateIn" />
+
+            <label>Position: </label>
+            <select id="positionIn" name="positionIn">
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="submit" class="btn btn-primary">Save</button>
+            <a id="reset" onclick="reset()" class="btn btn-primary text-white">Reset</a>
+        </div>
+    </form>
+
+    <table class="table table-striped text-break">
+        <thead class="thead-dark">
+            <tr>
+                <th width="5%">Id</th>
+                <th width="20%">Last name</th>
+                <th width="20%">First name</th>
+                <th width="20%">Middle name</th>
+                <th width="15%">Birth date</th>
+                <th width="10%">Position</th>
+                <th width="10%">Modification</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        async function GetEmployees() {
+            const response = await fetch("/api/employees", {
+                method: "GET",
+                headers: { "Accept": "application/json" }
+            });
+
+            if (response.ok == true) {
+                const employees = await response.json();
+                let rows = document.querySelector("tbody");
+                employees.forEach(s => {
+                    rows.append(row(s));
+                });
+            }
+        }
+
+        async function GetEmployee(id) {
+            const response = await fetch("/api/employees/" + id, {
+                method: "GET",
+                headers: { "Accept": "application/json" }
+            });
+            if (response.ok === true) {
+                const employee = await response.json();
+                const form = document.forms["employeeForm"];
+
+                form.elements["idIn"].value = employee.id;
+                form.elements["lastNameIn"].value = employee.lastName;
+                form.elements["firstNameIn"].value = employee.firstName;
+                form.elements["middleNameIn"].value = employee.middleName;
+                form.elements["birthDateIn"].value = employee.birthDate.substring(0, 10);
+                form.elements["positionIn"].value = employee.positionId;
+            }
+        }
+
+        async function CreateEmployee(employeeId, employeeLastName, employeeFirstName, employeeMiddleName, employeeBirthDate, employeePosition) {
+            const response = await fetch("api/employees", {
+                method: "POST",
+                headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    id: parseInt(employeeId, 10),
+                    lastName: employeeLastName,
+                    firstName: employeeFirstName,
+                    middleName: employeeMiddleName,
+                    birthDate: employeeBirthDate,
+                    positionId: parseInt(employeePosition, 10)
+                })
+            });
+            if (response.ok === true) {
+                const employee = await response.json();
+                reset();
+                document.querySelector("tbody").append(row(employee));
+            }
+        }
+
+        async function EditEmployee(employeeId, employeeLastName, employeeFirstName, employeeMiddleName, employeeBirthDate, employeePosition) {
+            const response = await fetch("/api/employees", {
+                method: "PUT",
+                headers: {"Content-Type": "application/json" },
+                body: JSON.stringify({
+                    id: parseInt(employeeId, 10),
+                    lastName: employeeLastName,
+                    firstName: employeeFirstName,
+                    middleName: employeeMiddleName,
+                    birthDate: employeeBirthDate,
+                    positionId: parseInt(employeePosition, 10)
+                })
+            });
+            if (response.ok === true) {
+                const employee = await response.json();
+                reset();
+                document.querySelector("tr[data-rowid='" + employee.id + "']").replaceWith(row(employee));
+            }
+        }
+
+        async function DeleteEmployee(id) {
+            const response = await fetch("/api/employees/" + id, {
+                method: "DELETE",
+                headers: { "Accept": "application/json" }
+            });
+            if (response.ok === true) {
+                const employee = await response.json();
+                document.querySelector("tr[data-rowid='" + employee.id + "']").remove();
+            }
+        }
+
+        function row(employee) {
+            const tr = document.createElement("tr");
+            tr.setAttribute("data-rowid", employee.id);
+
+            const idTd = document.createElement("td");
+            idTd.append(employee.id);
+            tr.append(idTd);
+
+            const lastNameIn = document.createElement("td");
+            lastNameIn.append(employee.lastName);
+            tr.append(lastNameIn);
+
+            const firstNameIn = document.createElement("td");
+            firstNameIn.append(employee.firstName);
+            tr.append(firstNameIn);
+
+            const middleNameIn = document.createElement("td");
+            middleNameIn.append(employee.middleName);
+            tr.append(middleNameIn);
+
+            const birthDateIn = document.createElement("td");
+            birthDateIn.append(employee.birthDate.substring(0, 10));
+            tr.append(birthDateIn);
+
+            const positionIn = document.createElement("td");
+            positionIn.append(employee.position.name);
+            tr.append(positionIn);
+
+            const linksTd = document.createElement("td");
+
+            const editLink = document.createElement("a");
+            editLink.setAttribute("data-id", employee.id);
+            editLink.setAttribute("style", "cursor:pointer;padding:15px;");
+            editLink.append("Change");
+            editLink.addEventListener("click", e => {
+                e.preventDefault();
+                GetEmployee(employee.id);
+            });
+            linksTd.append(editLink);
+
+            const removeLink = document.createElement("a");
+            removeLink.setAttribute("data-id", employee.id);
+            removeLink.setAttribute("style", "cursor:pointer;padding:15px;");
+            removeLink.append("Delete");
+            removeLink.addEventListener("click", e => {
+                e.preventDefault();
+                DeleteEmployee(employee.id);
+            });
+
+            linksTd.append(removeLink);
+            tr.appendChild(linksTd);
+
+            return tr;
+        }
+
+        function reset() {
+            const form = document.forms["employeeForm"];
+            form.reset();
+            form.elements["idIn"].value = 0;
+        }
+
+        document.getElementById("reset").click(function (e) {
+            e.preventDefault();
+            reset();
+        })
+
+        document.forms["employeeForm"].addEventListener("submit", e => {
+            e.preventDefault();
+            const form = document.forms["employeeForm"];
+            const id = form.elements["idIn"].value;
+            const lastName = form.elements["lastNameIn"].value;
+            const firstName = form.elements["firstNameIn"].value;
+            const middleName = form.elements["middleNameIn"].value;
+            const birthDate = form.elements["birthDateIn"].value;
+            const positionId = form.elements["positionIn"].value;
+
+            if (id == 0)
+                CreateEmployee(id, lastName, firstName, middleName, birthDate, positionId);
+            else
+                EditEmployee(id, lastName, firstName, middleName, birthDate, positionId);
+        });
+
+        async function GetPositions() {
+            const response = await fetch("/api/employees/positions", {
+                method: "GET",
+                headers: { "Accept": "application/json" }
+            });
+            if (response.ok == true) {
+                const positions = await response.json();
+                let select = document.getElementById("positionIn");
+                var i = 0;
+                positions.forEach(g => {
+                    select.options[i] = new Option(g.name, g.id);
+                    i += 1;
+                })
+            }
+        }
+
+        GetEmployees();
+        GetPositions();
+    </script>
+</body>
+</html>
